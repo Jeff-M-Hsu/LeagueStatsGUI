@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <ImageView fitHeight="42.0" fitWidth="42.0" layoutX="32.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="http://opgg-static.akamaized.net/images/lol/item/1412.png?image=w_42&amp;v=15192252000" />
+               </image>
+            </ImageView>
+            <ListView layoutX="400.0" prefWidth="200.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
