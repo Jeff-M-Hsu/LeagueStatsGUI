@@ -49,7 +49,6 @@ public class SearchForm {
 		return itemList;
 	}
 
-
 	public void summonerSearch(WebClient client){
 		
 		try {
@@ -79,6 +78,10 @@ public class SearchForm {
 			List<HtmlElement> summonerName = profilePage.getByXPath("//span[@class='Name']");
 			name = summonerName.get(summonerName.size()-1).asText();
 			
+			getProfileInfo();
+			liveGameSearch();
+			championAutoSearch(client);
+			
 		} catch (FailingHttpStatusCodeException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -91,7 +94,7 @@ public class SearchForm {
 		}
 	}
 
-	public void getProfileInfo() {
+	private void getProfileInfo() {
 
 		//Gets level of summoner
 		DomElement levelElement = profilePage.getFirstByXPath("//div[@class='ProfileIcon']");
@@ -121,7 +124,7 @@ public class SearchForm {
 		yourself = new Summoner(name, level, league + lp, lastSeasonRank);
 	}
 
-	public void liveGameSearch(){
+	private void liveGameSearch(){
 
 		try {
 			//Clicks the "Live Game" button
@@ -160,7 +163,7 @@ public class SearchForm {
 		}
 	}
 
-	public void championAutoSearch(WebClient client) {
+	private void championAutoSearch(WebClient client) {
 
 		try {
 			//Detects the champion you are using and looks up its op.gg page

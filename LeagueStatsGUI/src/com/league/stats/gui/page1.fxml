@@ -7,18 +7,98 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
-   <children>
-      <Pane prefHeight="400.0" prefWidth="600.0">
-         <children>
-            <ImageView fitHeight="42.0" fitWidth="42.0" layoutX="32.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="http://opgg-static.akamaized.net/images/lol/item/1412.png?image=w_42&amp;v=15192252000" />
-               </image>
-            </ImageView>
-            <ListView layoutX="400.0" prefWidth="200.0" />
-         </children>
-      </Pane>
-   </children>
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+	<children>
+		<Pane prefHeight="420.0" prefWidth="600.0">
+			<children>
+				<ImageView fitHeight="42.0" fitWidth="42.0" layoutX="42.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0">
+					<image>
+						<Image url="http://opgg-static.akamaized.net/images/lol/item/1412.png?image=w_42&amp;v=15192252000" />
+					</image>
+				</ImageView>
+				<ImageView fitHeight="42.0" fitWidth="42.0" layoutX="85.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0">
+					<image>
+						<Image url="http://opgg-static.akamaized.net/images/lol/item/1412.png?image=w_42&amp;v=15192252000" />
+					</image>
+				</ImageView>
+				<ImageView fitHeight="42.0" fitWidth="42.0" layoutX="128.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0">
+					<image>
+						<Image url="http://opgg-static.akamaized.net/images/lol/item/1412.png?image=w_42&amp;v=15192252000" />
+					</image>
+				</ImageView>
+				<ImageView fitHeight="42.0" fitWidth="42.0" layoutX="128.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0">
+					<image>
+						<Image url="http://opgg-static.akamaized.net/images/lol/item/1412.png?image=w_42&amp;v=15192252000" />
+					</image>
+				</ImageView>
+				<ImageView fitHeight="42.0" fitWidth="42.0" layoutX="85.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0">
+					<image>
+						<Image url="http://opgg-static.akamaized.net/images/lol/item/1412.png?image=w_42&amp;v=15192252000" />
+					</image>
+				</ImageView>
+				<ImageView fitHeight="42.0" fitWidth="42.0" layoutX="42.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0">
+					<image>
+						<Image url="http://opgg-static.akamaized.net/images/lol/item/1412.png?image=w_42&amp;v=15192252000" />
+					</image>
+				</ImageView>
+				<ImageView fitHeight="42.0" fitWidth="42.0" layoutX="128.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0">
+					<image>
+						<Image url="http://opgg-static.akamaized.net/images/lol/item/1412.png?image=w_42&amp;v=15192252000" />
+					</image>
+				</ImageView>
+				<ImageView fitHeight="42.0" fitWidth="42.0" layoutX="85.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0">
+					<image>
+						<Image url="http://opgg-static.akamaized.net/images/lol/item/1412.png?image=w_42&amp;v=15192252000" />
+					</image>
+				</ImageView>
+				<ImageView fitHeight="42.0" fitWidth="42.0" layoutX="42.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0">
+					<image>
+						<Image url="http://opgg-static.akamaized.net/images/lol/item/1412.png?image=w_42&amp;v=15192252000" />
+					</image>
+				</ImageView>
+				<Label layoutX="90.0" layoutY="12.0" text="Core" translateY="-5.0" />
+				<Label layoutX="285.0" layoutY="12.0" text="Boots" translateY="-5.0" />
+				<ImageView fitHeight="42.0" fitWidth="42.0" layoutX="324.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0">
+					<image>
+						<Image url="http://opgg-static.akamaized.net/images/lol/item/1412.png?image=w_42&amp;v=15192252000" />
+					</image>
+				</ImageView>
+				<ImageView fitHeight="42.0" fitWidth="42.0" layoutX="281.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0">
+					<image>
+						<Image url="http://opgg-static.akamaized.net/images/lol/item/1412.png?image=w_42&amp;v=15192252000" />
+					</image>
+				</ImageView>
+				<ImageView fitHeight="42.0" fitWidth="42.0" layoutX="238.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0">
+					<image>
+						<Image url="http://opgg-static.akamaized.net/images/lol/item/1412.png?image=w_42&amp;v=15192252000" />
+					</image>
+				</ImageView>
+				<ImageView fitHeight="42.0" fitWidth="42.0" layoutX="238.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0">
+					<image>
+						<Image url="http://opgg-static.akamaized.net/images/lol/item/1412.png?image=w_42&amp;v=15192252000" />
+					</image>
+				</ImageView>
+				<ImageView fitHeight="42.0" fitWidth="42.0" layoutX="281.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0">
+					<image>
+						<Image url="http://opgg-static.akamaized.net/images/lol/item/1412.png?image=w_42&amp;v=15192252000" />
+					</image>
+				</ImageView>
+				<ImageView fitHeight="42.0" fitWidth="42.0" layoutX="324.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0">
+					<image>
+						<Image url="http://opgg-static.akamaized.net/images/lol/item/1412.png?image=w_42&amp;v=15192252000" />
+					</image>
+				</ImageView>
+				<Label layoutX="238.0" layoutY="104.0" text="Skill (Max Left -&gt; Right)" translateY="-5.0" />
+				<Label layoutX="436.0" layoutY="7.0" text="Recommended Items" />
+            <TextArea fx:id="items" editable="false" layoutX="395.0" layoutY="25.0" prefHeight="365.0" prefWidth="195.0">
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextArea>
+            <TextArea fx:id="summonerNames" editable="false" layoutX="10.0" layoutY="190.0" prefHeight="200.0" prefWidth="135.0" />
+            <TextArea fx:id="summonerRatios" editable="false" layoutX="270.0" layoutY="190.0" prefHeight="200.0" prefWidth="125.0" />
+            <TextArea fx:id="summonerRanks" editable="false" layoutX="145.0" layoutY="190.0" prefHeight="200.0" prefWidth="125.0" />
+			</children>
+		</Pane>
+	</children>
 </AnchorPane>
