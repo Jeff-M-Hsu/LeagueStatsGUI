@@ -11,83 +11,23 @@
 	<children>
 		<Pane prefHeight="420.0" prefWidth="600.0">
 			<children>
-				<ImageView fitHeight="42.0" fitWidth="42.0" layoutX="42.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0">
-					<image>
-						<Image url="http://opgg-static.akamaized.net/images/lol/item/1412.png?image=w_42&amp;v=15192252000" />
-					</image>
-				</ImageView>
-				<ImageView fitHeight="42.0" fitWidth="42.0" layoutX="85.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0">
-					<image>
-						<Image url="http://opgg-static.akamaized.net/images/lol/item/1412.png?image=w_42&amp;v=15192252000" />
-					</image>
-				</ImageView>
-				<ImageView fitHeight="42.0" fitWidth="42.0" layoutX="128.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0">
-					<image>
-						<Image url="http://opgg-static.akamaized.net/images/lol/item/1412.png?image=w_42&amp;v=15192252000" />
-					</image>
-				</ImageView>
-				<ImageView fitHeight="42.0" fitWidth="42.0" layoutX="128.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0">
-					<image>
-						<Image url="http://opgg-static.akamaized.net/images/lol/item/1412.png?image=w_42&amp;v=15192252000" />
-					</image>
-				</ImageView>
-				<ImageView fitHeight="42.0" fitWidth="42.0" layoutX="85.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0">
-					<image>
-						<Image url="http://opgg-static.akamaized.net/images/lol/item/1412.png?image=w_42&amp;v=15192252000" />
-					</image>
-				</ImageView>
-				<ImageView fitHeight="42.0" fitWidth="42.0" layoutX="42.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0">
-					<image>
-						<Image url="http://opgg-static.akamaized.net/images/lol/item/1412.png?image=w_42&amp;v=15192252000" />
-					</image>
-				</ImageView>
-				<ImageView fitHeight="42.0" fitWidth="42.0" layoutX="128.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0">
-					<image>
-						<Image url="http://opgg-static.akamaized.net/images/lol/item/1412.png?image=w_42&amp;v=15192252000" />
-					</image>
-				</ImageView>
-				<ImageView fitHeight="42.0" fitWidth="42.0" layoutX="85.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0">
-					<image>
-						<Image url="http://opgg-static.akamaized.net/images/lol/item/1412.png?image=w_42&amp;v=15192252000" />
-					</image>
-				</ImageView>
-				<ImageView fitHeight="42.0" fitWidth="42.0" layoutX="42.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0">
-					<image>
-						<Image url="http://opgg-static.akamaized.net/images/lol/item/1412.png?image=w_42&amp;v=15192252000" />
-					</image>
-				</ImageView>
+				<ImageView fx:id="build_1_item_1" fitHeight="42.0" fitWidth="42.0" layoutX="42.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0" />
+				<ImageView fx:id="build_1_item_2" fitHeight="42.0" fitWidth="42.0" layoutX="85.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0" />
+				<ImageView fx:id="build_1_item_3" fitHeight="42.0" fitWidth="42.0" layoutX="128.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0" />
+				<ImageView fx:id="build_2_item_3" fitHeight="42.0" fitWidth="42.0" layoutX="128.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0" />
+				<ImageView fx:id="build_2_item_2" fitHeight="42.0" fitWidth="42.0" layoutX="85.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0" />
+				<ImageView fx:id="build_2_item_1" fitHeight="42.0" fitWidth="42.0" layoutX="42.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0" />
+				<ImageView fx:id="build_3_item_3" fitHeight="42.0" fitWidth="42.0" layoutX="128.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0" />
+				<ImageView fx:id="build_3_item_2" fitHeight="42.0" fitWidth="42.0" layoutX="85.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0" />
+				<ImageView fx:id="build_3_item_1" fitHeight="42.0" fitWidth="42.0" layoutX="42.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0" />
 				<Label layoutX="90.0" layoutY="12.0" text="Core" translateY="-5.0" />
 				<Label layoutX="285.0" layoutY="12.0" text="Boots" translateY="-5.0" />
-				<ImageView fitHeight="42.0" fitWidth="42.0" layoutX="324.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0">
-					<image>
-						<Image url="http://opgg-static.akamaized.net/images/lol/item/1412.png?image=w_42&amp;v=15192252000" />
-					</image>
-				</ImageView>
-				<ImageView fitHeight="42.0" fitWidth="42.0" layoutX="281.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0">
-					<image>
-						<Image url="http://opgg-static.akamaized.net/images/lol/item/1412.png?image=w_42&amp;v=15192252000" />
-					</image>
-				</ImageView>
-				<ImageView fitHeight="42.0" fitWidth="42.0" layoutX="238.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0">
-					<image>
-						<Image url="http://opgg-static.akamaized.net/images/lol/item/1412.png?image=w_42&amp;v=15192252000" />
-					</image>
-				</ImageView>
-				<ImageView fitHeight="42.0" fitWidth="42.0" layoutX="238.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0">
-					<image>
-						<Image url="http://opgg-static.akamaized.net/images/lol/item/1412.png?image=w_42&amp;v=15192252000" />
-					</image>
-				</ImageView>
-				<ImageView fitHeight="42.0" fitWidth="42.0" layoutX="281.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0">
-					<image>
-						<Image url="http://opgg-static.akamaized.net/images/lol/item/1412.png?image=w_42&amp;v=15192252000" />
-					</image>
-				</ImageView>
-				<ImageView fitHeight="42.0" fitWidth="42.0" layoutX="324.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0">
-					<image>
-						<Image url="http://opgg-static.akamaized.net/images/lol/item/1412.png?image=w_42&amp;v=15192252000" />
-					</image>
-				</ImageView>
+				<ImageView fx:id="boots_3" fitHeight="42.0" fitWidth="42.0" layoutX="324.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0" />
+				<ImageView fx:id="boots_2" fitHeight="42.0" fitWidth="42.0" layoutX="281.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0" />
+				<ImageView fx:id="boots_1" fitHeight="42.0" fitWidth="42.0" layoutX="238.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0" />
+				<ImageView fx:id="skill_1" fitHeight="42.0" fitWidth="42.0" layoutX="238.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0" />
+				<ImageView fx:id="skill_2" fitHeight="42.0" fitWidth="42.0" layoutX="281.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0" />
+				<ImageView fx:id="skill_3" fitHeight="42.0" fitWidth="42.0" layoutX="324.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0" />
 				<Label layoutX="238.0" layoutY="104.0" text="Skill (Max Left -&gt; Right)" translateY="-5.0" />
 				<Label layoutX="436.0" layoutY="7.0" text="Recommended Items" />
             <TextArea fx:id="items" editable="false" layoutX="395.0" layoutY="25.0" prefHeight="365.0" prefWidth="195.0">

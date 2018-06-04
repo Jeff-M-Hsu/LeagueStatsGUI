@@ -2,6 +2,7 @@ package com.league.stats.gui;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.util.Arrays;
 import java.util.List;
 
 import com.gargoylesoftware.htmlunit.ElementNotFoundException;
@@ -22,8 +23,10 @@ public class SearchForm {
 	private HtmlPage livePage;
 	private HtmlPage championPage;
 	private Summoner[] players;
-	private HtmlTableRow[] skillTable;
+	private List<HtmlElement> skillBuild;
 	private List<HtmlElement> itemList;
+	private List<HtmlElement> itemBuild;
+	private List<HtmlElement> boots;
 
 	public SearchForm(String searchQuery) {
 		name = searchQuery;
@@ -41,12 +44,19 @@ public class SearchForm {
 		return players;
 	}
 
-	HtmlTableRow[] getSkillTable() {
-		return skillTable;
+	List<HtmlElement> getSkillBuild() {
+		return skillBuild;
 	}
 
 	List<HtmlElement> getItemList() {
 		return itemList;
+	}
+	
+	List<HtmlElement> getItemBuild() {
+		return itemBuild;
+	}
+	List<HtmlElement> getBootsBuild(){
+		return boots;
 	}
 
 	public void summonerSearch(WebClient client){
@@ -170,14 +180,10 @@ public class SearchForm {
 			HtmlTableRow select = livePage.getFirstByXPath("//tr[td/a[text()='"+name+"']]");
 			HtmlAnchor championSelected= (HtmlAnchor) select.getFirstElementChild().getFirstElementChild();
 			championPage = client.getPage("http://na.op.gg"+championSelected.getAttribute("href"));
-			skillTable = skillBuild(championPage);
+			skillBuild = skillBuild(client);
 			itemList = itemList(client);
-			for(int i = 0; i < itemList.size(); i++) {
-				System.out.println(itemList.get(i).asText());
-			}
-			System.out.println("Level:\t" + skillTable[0].asText());
-			System.out.println("Skill:\t" + skillTable[1].asText());
-			//System.out.println(championPage.asText());
+			itemBuild = itemBuild(client);
+			boots = bootsBuild(client);
 		} catch (FailingHttpStatusCodeException e) {
 			e.printStackTrace();
 		} catch (MalformedURLException e) {
@@ -189,13 +195,13 @@ public class SearchForm {
 		}
 	}
 
-	private HtmlTableRow[] skillBuild(HtmlPage page) throws InterruptedException {
+	private List<HtmlElement> skillBuild(WebClient client) throws InterruptedException, FailingHttpStatusCodeException, MalformedURLException, ElementNotFoundException, IOException {
 		Thread.sleep(2000);
 		//Gets table rows of recommended skill build
-		HtmlTableRow levels = (HtmlTableRow)championPage.getByXPath("//table[@class='champion-skill-build__table']/tbody/tr").get(0);
-		HtmlTableRow skills = (HtmlTableRow)championPage.getByXPath("//table[@class='champion-skill-build__table']/tbody/tr").get(1);
-		HtmlTableRow[] table = {levels, skills};
-		return table;
+		HtmlPage skillPage = client.getPage("http://na.op.gg" + championPage.getAnchorByText("Skills").getAttribute("href"));
+		List<HtmlElement> skills = skillPage.getByXPath("//ul[@class='champion-stats__list']/li/img");
+		skills.subList(5, skills.size()).clear();
+		return skills;
 	}
 
 	private List<HtmlElement> itemList(WebClient client) throws FailingHttpStatusCodeException, MalformedURLException, ElementNotFoundException, IOException{
@@ -203,7 +209,21 @@ public class SearchForm {
 		//Open champion's recommended items list
 		HtmlPage itemPage = client.getPage("http://na.op.gg" + championPage.getAnchorByText("Items").getAttribute("href"));
 		List<HtmlElement> items = itemPage.getByXPath("//div[@class='champion-stats__single__item']/span");
+		items = items.subList(3, items.size());
+		return items;
+	}
+	
+	private List<HtmlElement> itemBuild(WebClient client) throws FailingHttpStatusCodeException, MalformedURLException, ElementNotFoundException, IOException{
+		HtmlPage itemPage = client.getPage("http://na.op.gg" + championPage.getAnchorByText("Items").getAttribute("href"));
+		List<HtmlElement> items = itemPage.getByXPath("//tbody[@aria-live='polite']//img");
+		items.subList(15, items.size()).clear();
 		return items;
 	}
 
+	private List<HtmlElement> bootsBuild(WebClient client) throws FailingHttpStatusCodeException, MalformedURLException, ElementNotFoundException, IOException{
+		HtmlPage itemPage = client.getPage("http://na.op.gg" + championPage.getAnchorByText("Items").getAttribute("href"));
+		List<HtmlElement> boots = itemPage.getByXPath("//div[@class='champion-stats__single__item']//img");
+		boots.subList(3, boots.size()).clear();
+		return boots;
+	}
 }

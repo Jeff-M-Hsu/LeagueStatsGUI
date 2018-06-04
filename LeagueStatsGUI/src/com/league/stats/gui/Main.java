@@ -29,7 +29,6 @@ public class Main extends Application{
 		try {
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(Main.class.getResource("page2.fxml"));
-
 			rootLayout = (BorderPane) loader.load();
 			Scene scene = new Scene(rootLayout);
 			primaryStage.setScene(scene);
@@ -46,6 +45,7 @@ public class Main extends Application{
 			FXController controller = new FXController();
 			loader.setController(controller);
 			AnchorPane overview = (AnchorPane)loader.load();
+			overview.getStylesheets().add(Main.class.getResource("./application.css").toExternalForm());
 			rootLayout.setCenter(overview);
 		} catch(IOException e) {
 			e.printStackTrace();
