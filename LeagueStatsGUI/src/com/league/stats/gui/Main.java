@@ -2,6 +2,7 @@ package com.league.stats.gui;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.fxml.FXMLLoader;
@@ -20,15 +21,17 @@ public class Main extends Application{
 	public void start(Stage primaryStage) {
 		this.primaryStage = primaryStage;
 		this.primaryStage.setTitle("OP.GG Search");
-		//primaryStage.initStyle(StageStyle.UNDECORATED);
+		primaryStage.initStyle(StageStyle.UNDECORATED);
 		initialize();
-		showWindow();
+		showDisplay();
 	}
 
 	public void initialize() {
 		try {
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(Main.class.getResource("page2.fxml"));
+			loader.setLocation(Main.class.getResource("Window.fxml"));
+			WindowController controller = new WindowController();
+			loader.setController(controller);
 			rootLayout = (BorderPane) loader.load();
 			Scene scene = new Scene(rootLayout);
 			primaryStage.setScene(scene);
@@ -38,14 +41,14 @@ public class Main extends Application{
 		}
 	}
 	
-	public void showWindow() {
+	public void showDisplay() {
 		try {
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(Main.class.getResource("page1.fxml"));
+			loader.setLocation(Main.class.getResource("Display.fxml"));
 			FXController controller = new FXController();
 			loader.setController(controller);
 			AnchorPane overview = (AnchorPane)loader.load();
-			overview.getStylesheets().add(Main.class.getResource("./application.css").toExternalForm());
+			overview.getStylesheets().add(Main.class.getResource("./ModenaMod.css").toExternalForm());
 			rootLayout.setCenter(overview);
 		} catch(IOException e) {
 			e.printStackTrace();

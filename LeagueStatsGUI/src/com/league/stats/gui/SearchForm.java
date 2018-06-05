@@ -10,6 +10,7 @@ import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.gargoylesoftware.htmlunit.html.HtmlTableRow;
+import com.sun.media.jfxmedia.logging.Logger;
 import com.gargoylesoftware.htmlunit.html.DomElement;
 import com.gargoylesoftware.htmlunit.html.HtmlAnchor;
 import com.gargoylesoftware.htmlunit.html.HtmlButton;
@@ -101,6 +102,8 @@ public class SearchForm {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} catch (NullPointerException e) {
+			//System.out.println("Invalid Summoner Name");
 		}
 	}
 
@@ -168,8 +171,9 @@ public class SearchForm {
 		} catch (IOException e) {
 			e.printStackTrace();
 		} catch (NullPointerException e) {
-			System.out.println("Summoner is not in a live game");
-			e.printStackTrace();
+			//System.out.println("Invalid Name or Summoner is not in a game");
+		} catch (IndexOutOfBoundsException e) {
+			//System.out.println("Invalid Name or Summoner is not in a game");
 		}
 	}
 
@@ -192,6 +196,8 @@ public class SearchForm {
 			e.printStackTrace();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
+		} catch (NullPointerException e ) {
+			//System.out.println("Invalid Name or Summoner is not in a game");
 		}
 	}
 
