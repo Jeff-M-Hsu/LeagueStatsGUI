@@ -6,10 +6,10 @@ import com.gargoylesoftware.htmlunit.BrowserVersion;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlElement;
 
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -39,29 +39,13 @@ public class FXController {
 	@FXML private ImageView boots_1;
 	@FXML private ImageView boots_2;
 	@FXML private ImageView boots_3;
-
-
+	@FXML private TextField summoner_name;
 
 	public FXController() {
 	}
 
 	@FXML
 	private void initialize() {
-		WebClient client = new WebClient(BrowserVersion.CHROME);
-		java.util.logging.Logger.getLogger("com.gargoylesoftware.htmlunit").setLevel(java.util.logging.Level.OFF);
-		java.util.logging.Logger.getLogger("org.apache.http").setLevel(java.util.logging.Level.OFF);
-		client.getOptions().setJavaScriptEnabled(true);
-		SearchForm search = new SearchForm("dyrus");
-		search.summonerSearch(client);
-		players = search.getPlayers();
-		item = search.getItemList();
-		skills = search.getSkillBuild();
-		itemBuild = search.getItemBuild();
-		boots = search.getBootsBuild();
-		playerViewer();
-		itemViewer();
-		imageAdder();
-		client.close();
 	}
 
 	private void playerViewer() {
@@ -102,12 +86,34 @@ public class FXController {
 		boots_1.setImage(new Image("https:"+boots.get(0).getAttribute("src")));
 		boots_2.setImage(new Image("https:"+boots.get(1).getAttribute("src")));
 		boots_3.setImage(new Image("https:"+boots.get(2).getAttribute("src")));
-
-
 	}
 
 	@FXML
-	private void close(ActionEvent event) {
-		Platform.exit();
+	private void onEnter(ActionEvent event) {
+		search(event);
+	}
+
+	@FXML
+	private void search(ActionEvent event) {
+		try {
+			java.util.logging.Logger.getLogger("com.gargoylesoftware.htmlunit").setLevel(java.util.logging.Level.OFF);
+			java.util.logging.Logger.getLogger("org.apache.http").setLevel(java.util.logging.Level.OFF);
+			WebClient client = new WebClient(BrowserVersion.CHROME);
+			client.getOptions().setJavaScriptEnabled(true);
+			SearchForm search = new SearchForm(summoner_name.getText());
+			search.summonerSearch(client);
+			while(search.getPlayers().equals(null)) {}
+			players = search.getPlayers();
+			item = search.getItemList();
+			skills = search.getSkillBuild();
+			itemBuild = search.getItemBuild();
+			boots = search.getBootsBuild();
+			playerViewer();
+			itemViewer();
+			imageAdder();
+			client.close();
+		} catch(NullPointerException e) {
+			//System.out.println("Invalid Summoner");
+		}
 	}
 }
